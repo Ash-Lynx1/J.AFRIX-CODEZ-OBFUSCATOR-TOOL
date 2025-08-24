@@ -4,8 +4,8 @@ services:
     env: node
     plan: free
     region: oregon
-    buildCommand: "cd backend && npm install && cd ../frontend && echo 'Frontend ready'"
+    buildCommand: "cd backend && npm install"
     startCommand: "cd backend && npm start"
     envVars:
       - key: PORT
-        value: "10000"  # Render overrides with its own port automatically
+        value: "10000"

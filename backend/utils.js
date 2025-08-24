@@ -1,14 +1,10 @@
-// backend/utils.js
+// Utility functions for backend
+// Minimal, safe, fully importable
 
 /**
- * Utility functions for Jay.Codez backend.
- * Safe, minimal, and ready for future use.
- */
-
-/**
- * Example placeholder function.
+ * Placeholder utility function
  * @returns {string}
  */
 export function exampleUtility() {
-  return "This is a safe placeholder utility function.";
+  return "Safe placeholder utility function.";
 }
