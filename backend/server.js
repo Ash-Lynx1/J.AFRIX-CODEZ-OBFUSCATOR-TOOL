@@ -13,16 +13,17 @@ const __dirname = path.dirname(__filename);
 // Middleware
 app.use(cors());
 app.use(helmet());
-app.use(bodyParser.json({ limit: "5mb" }));
+app.use(bodyParser.json({ limit: "10mb" }));
 
-// Serve frontend files
-app.use(express.static("../frontend"));
+// Serve frontend static files
+app.use(express.static(path.join(__dirname, "../frontend")));
 
-// API for JS obfuscation
+// API endpoint for obfuscation
 app.post("/api/obfuscate", (req, res) => {
   try {
     const { code } = req.body;
     if (!code) return res.status(400).json({ error: "No code provided" });
+    
     const obfuscatedCode = obfuscateJS(code);
     res.json({ obfuscatedCode });
   } catch (err) {
@@ -31,7 +32,7 @@ app.post("/api/obfuscate", (req, res) => {
   }
 });
 
-// Fallback routing
+// Fallback route for frontend
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });

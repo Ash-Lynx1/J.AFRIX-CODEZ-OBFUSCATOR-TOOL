@@ -1,6 +1,4 @@
-// frontend/app.js
-// Fully working JS for obfuscation frontend
-
+// Handles frontend interaction with obfuscation API
 document.addEventListener("DOMContentLoaded", () => {
   const inputCode = document.getElementById("inputCode");
   const outputCode = document.getElementById("outputCode");
@@ -9,10 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   obfuscateBtn.addEventListener("click", async () => {
     const code = inputCode.value.trim();
-    if (!code) {
-      alert("Please enter some JavaScript code!");
-      return;
-    }
+    if (!code) return alert("Please enter JS code!");
     
     try {
       const response = await fetch("/api/obfuscate", {
@@ -22,15 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       
       const data = await response.json();
-      if (data.error) {
-        alert("Error: " + data.error);
-        return;
-      }
+      if (data.error) return alert("Error: " + data.error);
       
       outputCode.value = data.obfuscatedCode;
     } catch (err) {
       console.error(err);
-      alert("An error occurred while obfuscating code.");
+      alert("Error during obfuscation.");
     }
   });
   
@@ -38,6 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!outputCode.value) return;
     outputCode.select();
     document.execCommand("copy");
-    alert("Obfuscated code copied to clipboard!");
+    alert("Obfuscated code copied!");
   });
 });

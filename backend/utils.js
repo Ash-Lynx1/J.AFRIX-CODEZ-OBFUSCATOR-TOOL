@@ -1,9 +1,7 @@
-// Utility functions for backend
-// Minimal, safe, fully importable
+// Minimal, safe utility functions for backend
 
 /**
- * Placeholder utility function
- * @returns {string}
+ * Example placeholder utility function
  */
 export function exampleUtility() {
   return "Safe placeholder utility function.";
