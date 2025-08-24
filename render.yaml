@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: jay-codez-obfuscator
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: "cd backend && npm install && cd ../frontend && echo 'Frontend ready'"
+    startCommand: "cd backend && npm start"
+    envVars:
+      - key: PORT
+        value: "10000"  # Render overrides with its own port automatically

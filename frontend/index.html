@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jay.Codez Obfuscator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1>J.AFRIX-CODEZ</h1>
+    <p>Protect your JavaScript code with advanced obfuscation</p>
+  </header>
+
+  <main class="main-container">
+    <section class="form-section">
+      <h2>Enter Your JavaScript Code</h2>
+      <textarea id="inputCode" placeholder="// Paste your JS code here..."></textarea>
+      <button id="obfuscateBtn">Obfuscate Code</button>
+    </section>
+
+    <section class="output-section">
+      <h2>Obfuscated Code</h2>
+      <textarea id="outputCode" readonly placeholder="Your obfuscated code will appear here..."></textarea>
+      <button id="copyBtn">Copy to Clipboard</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://whatsapp.com/channel/0029Vb6K4nw96H4LOMaOLF22" class="icon-btn whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com/@nexoratechn" class="icon-btn youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https/tiktok.com/jadenafrix4" class="icon-btn tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://github.com/JadenAfrix1" class="icon-btn github" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <nav class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+    <p>&copy; <span id="year"></span> Jay.Codez. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms of Service</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <h1>Terms of Service</h1>
+  </header>
+
+  <main class="main-container">
+    <section class="terms-section">
+      <p>Welcome to <strong>J.AFRIX-CODEZ</strong>. By using our service, you agree to the following terms and conditions:</p>
+
+      <h2>1. Usage</h2>
+      <p>You may use J.AFRIX-CODEZ to obfuscate your own JavaScript code for personal or professional projects. Unauthorized distribution or abuse of the service is prohibited.</p>
+
+      <h2>2. Code Submission</h2>
+      <p>All code submitted for obfuscation is processed temporarily. We do not store or share your code with third parties.</p>
+
+      <h2>3. Liability</h2>
+      <p>J.AFRIX-CODEZ is provided "as is" without warranties. We are not responsible for any damages resulting from the use of obfuscated code.</p>
+
+      <h2>4. Prohibited Activities</h2>
+      <ul>
+        <li>Attempting to reverse-engineer or bypass the obfuscator.</li>
+        <li>Submitting harmful or malicious code.</li>
+        <li>Overloading or abusing the service.</li>
+      </ul>
+
+      <h2>5. Modifications</h2>
+      <p>We reserve the right to modify or terminate the service at any time without prior notice. Terms may be updated periodically.</p>
+
+      <h2>6. Contact</h2>
+      <p>If you have questions about these terms, reach out via our social links or jadenafrix10@gmail.com.</p>
+
+      <button onclick="window.location.href='index.html'" class="back-btn">← OBFUSCATE CODE</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://whatsapp.com/channel/0029Vb6K4nw96H4LOMaOLF22" class="icon-btn whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com/@nexoratechn" class="icon-btn youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://tiktok.com/jadenafrix4" class="icon-btn tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://github.com/JadenAfrix1" class="icon-btn github" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <nav class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+    <p>&copy; <span id="year"></span> NEXORA. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

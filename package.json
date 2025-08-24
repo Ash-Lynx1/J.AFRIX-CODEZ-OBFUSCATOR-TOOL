@@ -1,0 +1,21 @@
+{
+  "name": "jay-codez-obfuscator",
+  "version": "1.0.0",
+  "description": "Full-stack JavaScript Obfuscator project",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "echo 'Frontend has no dependencies'"
+  },
+  "keywords": [
+    "javascript",
+    "obfuscator",
+    "fullstack",
+    "render-deploy"
+  ],
+  "author": "NEXTGEN TECH",
+  "license": "MIT"
+}
